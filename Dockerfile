@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
     && apt-get install -y wget \
-    && wget -O - http://packages.vyos.net/vyos-pubkey.gpg  | apt-key add - \
+    && wget -O - http://vyos.net/so3group_maintainers.key | apt-key add - \
     && echo "deb http://backports.debian.org/debian-backports squeeze-backports main" > /etc/apt/sources.list.d/bp.list \
     && apt-get update \
     && apt-get -t squeeze-backports install -y squashfs-tools \
