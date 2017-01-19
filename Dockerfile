@@ -1,7 +1,6 @@
 FROM debian:squeeze
 
 ENV DEBIAN_FRONTEND noninteractive
-ADD conf/sources.list /etc/apt/sources.list
 
 RUN apt-get update \
     && apt-get install -y wget \
