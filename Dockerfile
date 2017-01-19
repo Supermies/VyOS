@@ -13,7 +13,7 @@ RUN apt-get update \
 
 RUN mkdir /build
 RUN chmod -R 777 /build
-ADD build.sh /build/build.sh
+ADD build.sh /build.sh
 RUN chmod -R 777 /build/build.sh
 
 WORKDIR /build
