@@ -9,7 +9,7 @@ RUN apt-get update \
     #&& echo "deb http://httpredir.debian.org/debian jessie-backports main contrib non-free" > /etc/apt/sources.list.d/bp.list \
     && apt-get update \
     && apt-get -t jessie-backports install -y squashfs-tools \
-    && apt-get install -y git autoconf live-helper dpkg-dev syslinux genisoimage make lsb-release fakechroot devscripts
+    && apt-get install -y git autoconf live-build dpkg-dev syslinux genisoimage make lsb-release fakechroot devscripts pbuilder python-pystache 
 
 RUN mkdir /build
 RUN chmod -R 777 /build
