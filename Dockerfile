@@ -12,9 +12,9 @@ RUN apt-get update \
     && apt-get install -y git autoconf dpkg-dev syslinux genisoimage make lsb-release fakechroot devscripts
 
 RUN mkdir /build
-RUN chmod +x -R /build
-ADD build.sh /build.sh
-RUN chmod +x -R /build
+RUN chmod -R 777 /build
+ADD build.sh /build/build.sh
+RUN chmod -R 777 /build/build.sh
 
 WORKDIR /build
 
